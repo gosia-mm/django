@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+		<h1>Nowa rezerwacja</h1>
+		<h3>Wybierz miasto</h3>
+		<form method="post" action="Default.aspx">
+			<select id="miasto">
+				{% for miasto in miasta %}
+				<option value="nazwa_miasta">{{ miasto.nazwa_miasta }}</option>
+				{% endfor %}	
+			</select>
+		</form>
+		
+		<h3>Wybierz datę rozpoczęcia</h3>
+			<input type="date" id="data_od" name="data_od" value="" />
+			
+		<h3>Wybierz datę zakończenia</h3>
+			<input type="date" id="data_do" name="data_do" value="" />
+		
+		<p><button type="submit" class="save btn btn-default">Szukaj</button></p>
+	
+{% endblock content %}
+
+
+
+		
+		

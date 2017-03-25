@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h1>Nowa rezerwacja</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+		{{ form2.as_p }}
+        <button type="submit" class="save btn btn-default">Szukaj</button>
+    </form>
+{% endblock %}
